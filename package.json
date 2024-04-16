@@ -4,8 +4,18 @@
   "description": "Node.js + Vue.js Webapp Template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:back": "cd backend/ && npm run dev",
+    "dev:front": "cd frontend/ && npm run dev",
+    "dev": "run-p dev:back dev:front",
+    "packages:clean": "rimraf backend/node_modules/ frontend/node_modules/ node_modules/",
+    "packages:install": "npm install && (cd backend && npm install) && (cd frontend && npm install)"
   },
   "author": "Daniel Gacitúa",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "npm-run-all2": "^6.1.2",
+    "pm2": "^5.3.1",
+    "rimraf": "^5.0.5"
+  }
 }
