@@ -1,0 +1,11 @@
+{
+  "name": "node-vue-template",
+  "version": "1.0.0",
+  "description": "Node.js + Vue.js Webapp Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Gacitúa",
+  "license": "MIT"
+}
