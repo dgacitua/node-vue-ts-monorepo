@@ -7,7 +7,7 @@ WORKDIR /app
 
 COPY package*.json .
 
-RUN npm install
+RUN npm ci --silent
 
 COPY . .
 
@@ -24,6 +24,6 @@ RUN npm ci --only=production
 
 COPY --from=build /app/dist ./dist
 
-EXPOSE 3001
+EXPOSE 4000
 
-CMD ["node", "dist/index.js"]
+CMD [ "node", "dist/index.js" ]
